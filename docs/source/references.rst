@@ -3,7 +3,7 @@ Reference
 1. https://opus.nci.org.au/display/Help/Gadi+User+Guide
 
 
-Contributers
+Contributors
 ************
 
 1.  `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_

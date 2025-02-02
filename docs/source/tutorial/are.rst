@@ -7,7 +7,7 @@ Jupyter notebooks in ARE
     * **Tutorial:** 30 min
 
         **Objectives:**
-            #. Learn how to use Jupyter notebooks in ARE. 
+            * Learn how to use Jupyter notebooks in ARE. 
 
 
 .. image:: ../figs/1.png

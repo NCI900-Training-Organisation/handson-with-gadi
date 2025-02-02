@@ -7,8 +7,8 @@ Basics Linux Commands
     * **Tutorial:** 30 min
 
         **Objectives:**
-            #. Learn how to use Gadi terminal.
-            #. Learn some basic Linux commands.
+            * Learn how to use Gadi terminal.
+            * Learn some basic Linux commands.
 
 
 File and Directory Management
