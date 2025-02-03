@@ -7,7 +7,7 @@ Australian Research Environment (ARE)
     * **Tutorial:** 10 min
 
         **Objectives:**
-            #. Learn how to use Gadi terminal in ARE. 
+            * Learn how to use Gadi terminal in ARE. 
 
 
 .. image:: ../figs/12.png
