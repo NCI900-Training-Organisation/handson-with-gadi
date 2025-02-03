@@ -18,10 +18,10 @@ High-performance computing (HPC) involves using clusters of powerful processors 
 calculations at extremely high speeds. 
 
 **Why use HPC?**
-* ``Running large-scale tasks like cross-validating statistical models multiple times (e.g., 1000+ runs).``
-* ``Handling massive data sets, such as genomic sequencing, which would overwhelm local computers.``
-* ``Training machine learning algorithms that demand high computational power and memory.``
-* ``Performing tasks beyond the capability of standard PCs, including simulations, numerical calculations, and computer modeling.``
+* Running large-scale tasks like cross-validating statistical models multiple times (e.g., 1000+ runs).
+* Handling massive data sets, such as genomic sequencing, which would overwhelm local computers.
+* Training machine learning algorithms that demand high computational power and memory.
+* Performing tasks beyond the capability of standard PCs, including simulations, numerical calculations, and computer modeling.
 
 Computer architecture
 ********************************
