@@ -8,7 +8,7 @@ Introduction to HPC, NCI and Gadi
 
         **Objectives:**
             * Learn the general design of an HPC machine.
-            * Learn how Gadi is organized.
+            * Learn how Gadi is organised.
 
 
 What is High Performance Computing?
