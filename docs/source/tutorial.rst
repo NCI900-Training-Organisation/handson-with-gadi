@@ -4,7 +4,7 @@ Tutorial
 In this tutorial, we'll be using the Gadi HPC machine at NCI. A Python virtual environment 
 will be provided for you during the session.
 
-Repo: https://github.com/NCI900-Training-Organisation/handson-with-gadi.git
+Repo: https://github.com/NCI900-Training-Organisation/hands-on-with-gadi.git
 
 
 .. list-table::   
