@@ -34,13 +34,14 @@ time. It executes your code or script without requiring your direct involvement 
     #PBS -q normal
     #PBS -l ncpus=48
     #PBS -l mem=10GB
+    #PBS -l storage=gdata/vp91+scratch/vp91
     #PBS -l walltime=00:02:00
     #PBS -N testScript
 
     module load python3/3.11.0
     module load papi/7.0.1
 
-    . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
+    . /g/data/vp91/Training-Venvs/intro-to-numba/bin/activate
 
     which python
 
@@ -51,17 +52,18 @@ time. It executes your code or script without requiring your direct involvement 
     #!/bin/bash
 
     #PBS -P vp91 
-    #PBS -q normal
+    #PBS -q gpuvolta
     #PBS -l ncpus=12
     #PBS -l ngpus=1
     #PBS -l mem=10GB
+    #PBS -l storage=gdata/vp91+scratch/vp91
     #PBS -l walltime=00:02:00
-    #PBS -N testScript
+    #PBS -N gpuScript
 
     module load python3/3.11.0
     module load papi/7.0.1
 
-    . /scratch/vp91/Training-Venv/intro-parallel-prog/bin/activate
+    . /g/data/vp91/Training-Venvs/intro-to-numba/bin/activate
 
     nvidia-smi
 
