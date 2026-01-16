@@ -21,7 +21,9 @@ Repo: https://github.com/NCI900-Training-Organisation/handson-with-gadi.git
     - 30 minutes
   * - Submitting a Job
     - 30 minutes
-  * - Using ARE 
+  * - Using Jupyter Notebooks on ARE 
+    - 30 minutes
+  * - Using Virtual Desktops on ARE 
     - 30 minutes
 
 
@@ -32,6 +34,7 @@ Repo: https://github.com/NCI900-Training-Organisation/handson-with-gadi.git
     tutorial/basics.rst
     tutorial/jobs.rst
     tutorial/are.rst
+    tutorial/are_desktop.rst
 
 
 
