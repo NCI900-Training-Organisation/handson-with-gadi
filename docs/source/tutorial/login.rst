@@ -2,12 +2,12 @@ Logging in to Australian Research Environment (ARE)
 -------------------------------------
 
 .. admonition:: Overview
-   :class: Overview
+    :class: Overview
 
-    * **Tutorial:** 10 min
+    **Tutorial:** 10 min
 
-        **Objectives:**
-            * Learn how to use Gadi terminal in ARE. 
+    **Objectives:**
+        * Learn how to use Gadi terminal in ARE. 
 
 
 .. image:: ../figs/12.png

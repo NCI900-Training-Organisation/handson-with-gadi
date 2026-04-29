@@ -18,36 +18,31 @@ commands will guide you on how to create one if necessary.
 
 To get started with Python virtual environment load the Python module you want to use. In this workshop, we will be using *python3/3.11.0*.
 
-.. code-block:: console
-    :linenos:
+.. code-block:: shell
 
     module load python3/3.11.0
 
 Create the Python virtual environment.
 
-.. code-block:: console
-    :linenos:
+.. code-block:: shell
 
     python3 -m venv my_env
 
 Activate the Python virtual environment.
 
-.. code-block:: console
-    :linenos:
+.. code-block:: shell
 
     source my_env/bin/activate
 
 Install all the required Python packages.
 
-.. code-block:: console
-    :linenos:
+.. code-block:: shell
 
     python3 -m pip install python-papi numpy codetiming numba mpi4py
 
 You can deactivate the virtual environment once you are done with it.
 
-.. code-block:: console
-    :linenos:
+.. code-block:: shell
 
     deactivate
  

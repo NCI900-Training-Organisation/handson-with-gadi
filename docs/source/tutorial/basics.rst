@@ -2,13 +2,13 @@ Basics Linux Commands
 ----------------------
 
 .. admonition:: Overview
-   :class: Overview
+    :class: Overview
 
-    * **Tutorial:** 30 min
+    **Tutorial:** 30 min
 
-        **Objectives:**
-            * Learn how to use Gadi terminal.
-            * Learn some basic Linux commands.
+    **Objectives:**
+        * Learn how to use Gadi terminal.
+        * Learn some basic Linux commands.
 
 
 File and Directory Management

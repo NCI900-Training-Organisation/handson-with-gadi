@@ -2,13 +2,13 @@ Requesting Resources
 --------------------
 
 .. admonition:: Overview
-   :class: Overview
+    :class: Overview
 
-    * **Tutorial:** 30 min
+    **Tutorial:** 30 min
 
-        **Objectives:**
-            * Learn how to write a PBS job script for Gadi.
-            * Learn how to launch a job in Gadi.
+    **Objectives:**
+        * Learn how to write a PBS job script for Gadi.
+        * Learn how to launch a job in Gadi.
 
 1.  Which project are you using?
 2.  Which job queue are you planning to use?

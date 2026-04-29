@@ -2,13 +2,13 @@ Introduction to HPC, NCI and Gadi
 ---------------------------------
 
 .. admonition:: Overview
-   :class: Overview
+    :class: Overview
 
-    * **Tutorial:** 45 min
+    **Tutorial:** 45 min
 
-        **Objectives:**
-            * Learn the general design of an HPC machine.
-            * Learn how Gadi is organised.
+    **Objectives:**
+        * Learn the general design of an HPC machine.
+        * Learn how Gadi is organised.
 
 
 What is High Performance Computing?
