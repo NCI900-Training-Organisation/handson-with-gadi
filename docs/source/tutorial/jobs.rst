@@ -25,7 +25,7 @@ Batch jobs
 A batch job is a non-interactive job submitted to the scheduler (like PBS or SLURM) to run at a later 
 time. It executes your code or script without requiring your direct involvement during execution.
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     #!/bin/bash
@@ -46,7 +46,7 @@ time. It executes your code or script without requiring your direct involvement 
     which python
 
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     #!/bin/bash
@@ -83,21 +83,21 @@ All the Python code are available in the directory `python/src`` while all the j
 directory `python/jobScripts`. To submit a job use 
 the command
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     qsub cpu.pbs
 
 and to know the status of your job use the command
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     qstat <jobid>
 
 To know get the details about the job use the command
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     qstat -swx <jobid>
@@ -110,7 +110,7 @@ Interactive Jobs
  running. This means you have a command-line shell (e.g., terminal) on the compute node where you 
  can run commands in real-time.
 
-.. code-block:: console
+.. code-block:: bash
     :linenos:
 
     qsub -I -q normal  -P vp91 -l walltime=00:10:00,ncpus=48,mem=10GB

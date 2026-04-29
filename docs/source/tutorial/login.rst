@@ -1,4 +1,4 @@
-Australian Research Environment (ARE)
+Logging in to Australian Research Environment (ARE)
 -------------------------------------
 
 .. admonition:: Overview
