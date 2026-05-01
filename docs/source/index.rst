@@ -50,6 +50,8 @@ Infrastructure (NCI).
     - 20 minutes
   * - Virtual Desktop in ARE
     - 10 minutes
+  * - **Total**
+    - 140 minutes
 
 
 Contents
