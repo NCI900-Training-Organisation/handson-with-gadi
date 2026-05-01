@@ -28,24 +28,28 @@ Infrastructure (NCI).
    1. Access to a shell that supports SSH.
    2. NCI account and access to project `vp91`.
 
-.. list-table:: 
-  :widths: 20 20 
-  :header-rows: 1   
- 
+.. list-table::
+  :widths: 58 42
+  :header-rows: 1
+
   * - Topics
     - Duration
   * - Introduction to HPC, NCI and Gadi
-    - 45 minutes
-  * - Australian Research Environment (ARE)
+    - 20 minutes
+  * - Logging in to Gadi
     - 10 minutes
-  * - Basic Linux Commands
+  * - Navigating Gadi File System
     - 30 minutes
-  * - Submitting a Job
+  * - Modules
+    - 10 minutes
+  * - Using Python on Gadi
+    - 10 minutes
+  * - Requesting Resources
     - 30 minutes
-  * - Using Jupyter Notebooks on ARE 
-    - 30 minutes
-  * - Using Virtual Desktops on ARE 
-    - 30 minutes
+  * - Run Jupyter Notebooks on Gadi
+    - 20 minutes
+  * - Virtual Desktop in ARE
+    - 10 minutes
 
 
 Contents
