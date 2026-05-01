@@ -1,12 +1,14 @@
 
 # Run Jupyter Notebooks on Gadi 
 ARE (Australian Research Environment) gives you access to NCI’s Gadi supercomputer and data collections, all from a simple, graphical interface. ARE consists of a number of applications that support your research such as Virtual Desktop, JupyterLab, Terminal, etc.   
-:::{admonition} Overview
+
+```{admonition} Overview
+
 **Tutorial:** 30 min
 
-**Objectives:**
-    * Learn how to use Jupyter notebooks in ARE.
-:::
+**Objectives:**  
+    - Learn how to use Jupyter notebooks in ARE.
+```
 
 
 ## Cluster Access

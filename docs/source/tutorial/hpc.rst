@@ -149,3 +149,31 @@ The situation can become more complex:
 - Some jobs may require fewer CPUs but need more memory.
 - Others may require GPUs.
 - Some jobs might need to use the express queue.
+
+Queue Structure
+********************
+
+Jobs on Gadi are submitted to different queues, which determine resource availability, limits, and cost (service unit charge rates). Each queue is optimized for different workloads:
+
+- **normal**: For standard jobs, with moderate walltime and resource limits. Most projects use this queue by default.
+- **express**: For short, urgent work with higher queue priority but increased SU charges. Limited walltime.
+- **gpuvolta/gpua100**: Specifically for jobs requiring access to NVIDIA Volta or A100 GPUs, respectively.
+- **hugemem**: For jobs requiring nodes with large memory (up to several terabytes per node).
+- **copyq**: For high-speed data transfer jobs; not for general compute workloads.
+
+You select a queue using the `-q` option in your PBS batch script or interactive job request, for example:
+
+.. code-block:: bash
+
+   #PBS -q normal
+
+Each queue has limits, such as:
+
+- Maximum CPUs or GPUs per job
+- Maximum walltime
+- Maximum number of running jobs per project or user
+
+Up-to-date queue characteristics and charge rates are listed at: `Queue Limits <https://opus.nci.org.au/pages/viewpage.action?pageId=236881198>`_
+
+.. note::
+   Submitting to an express or GPU queue will affect both the job's priority and cost (SU consumption).
