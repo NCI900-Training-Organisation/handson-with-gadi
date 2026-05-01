@@ -10,25 +10,29 @@ Requesting Resources
         * Learn how to write a PBS job script for Gadi.
         * Learn how to launch a job in Gadi.
 
+If you remember the HPC usage flow diagram from the previous section, this section will show you how to submit the code through the scheduler to the compute nodes.
+
+.. image:: ../figs/HPC_usage_flow.png
+    :width: 60%
+    :align: center
+
+
 Planning Jobs
 **************
 
 To run compute tasks such as simulations, weather models, and sequence assemblies on Gadi, users need to submit them as **‘jobs’** to **‘queues’**. 
-Each queue has different hardware capabilities and limits to run different types of jobs. Ideally, we should know the answers to the following questions before running a job:
+Each queue has different hardware capabilities and limits to run different types of jobs. 
 
-::
+Ideally, we should know the answers to the following questions before running a job:
 
-   1.  Which project will you use for this job?
-   2.  Which queue will you submit the job to?
-   3.  How many CPU cores does your task require?
-   4.  Do you need any GPUs, and if so, how many?
-   5.  What is the anticipated runtime (walltime) for your job?
-   6.  Which modules must be loaded for your software?
-   7.  What command or script will run your main program?
+1.  Which **project** will you use for this job?
+2.  Which **modules** must be loaded for your software?
+3.  What **command or script** will run your main program?
+4.  How much **compute resources** (CPU cores/GPUs, memory, walltime) does your task require?
 
 However, this is not always possible, especially for new users or running a new workflow for the first time. In this case, we can follow the following steps:
 
-#. **Gather information:** Find out the available queues, and software modules to run your program.
+#. **Gather information:** Find out the available queues, hardware capabilities and software modules for your program.
 #. **Run test jobs:** use a small sample of the data and small number of cores/walltime to test the script/program.
 #. **Adjust resources:** gradually increase the resources and improve code efficiency to find the performance sweet spot.
 #. **Accounting:** check your project allocation and estimate the cost (time, RAM, compute cores etc.) of full job.
@@ -40,26 +44,103 @@ However, this is not always possible, especially for new users or running a new 
 
     Searching for this sweet spot can take time and experimentation, some code will need several iterations before that efficiency is found.     
 
- 
+Compute Resources
+^^^^^^^^^^^^^^^^^
+Compute resources are allocated to **projects**, not individual users, through various allocation schemes.
+
+- **Service Units (SU)** measure Gadi's compute hours.
+- Projects must have a compute allocation to run jobs.
+- Compute allocations are assigned quarterly.
+- Allocations can be transferred, adjusted, or reallocated by the project's Chief Investigator (CI) or scheme manager.
+- Unused allocations can roll over to the next quarter if requested within the first two weeks of the current quarter.
+
+Service Units (SUs) are charged based on the resources reserved for a job and the walltime. The resources reserved are determined by the greater of 
+the requested CPUs or the proportion of memory.
+
+**Job Cost (SU) = Queue Charge Rate × Max(NCPUs, Memory Proportion) × Walltime Used (Hours)**
+
+- **Queue Charge Rate**: The charge rate for the queue as listed in the `Queue Limits <https://opus.nci.org.au/pages/viewpage.action?pageId=236881198>`_. Note that using express queues increases job priority but also raises the job's cost.
+- **NCPUs**: The number of CPUs requested for the job using the PBS `-l ncpus` option.
+- **Memory Proportion**: Calculated as Memory requested ÷ Memory per core (where Memory Per Node is divided by NCPUs per node for the queue).
+
+
+.. admonition:: Examples of Job Costs
+   :class: info
+
+   **Example 1:** A job using 1 CPU for 30 minutes in the normal queue will incur a charge of 1 Service Unit (SU).
+
+   **Example 2:** A job using 4 CPUs with 16 GiB of memory for 5 hours of walltime in the normal queue will be charged 40 SUs.
+
+   - **Calculation:** 4 CPUs × 5 hours × 2 SU per hour = 40 SU.
+
+The situation can become more complex:
+
+- Some jobs may require fewer CPUs but need more memory.
+- Others may require GPUs.
+- Some jobs might need to use the express queue.
+
+Queue Structure
+^^^^^^^^^^^^^^^^^
+
+Jobs on Gadi are submitted to different **queues**, which determine resource availability, limits, and cost (service unit charge rates). Each queue is optimized for different workloads:
+
+.. list-table:: Gadi Queue Types
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Queue Name
+     - Description
+   * - **normal**
+     - For standard jobs, with moderate walltime and resource limits. Most projects use this queue by default.
+   * - **express**
+     - For short, urgent work with higher queue priority but increased SU charges. Limited walltime.
+   * - **gpuvolta/gpua100**
+     - Specifically for jobs requiring access to NVIDIA Volta or A100 GPUs, respectively.
+   * - **hugemem**
+     - For jobs requiring nodes with large memory (up to several terabytes per node).
+   * - **copyq**
+     - For high-speed data transfer jobs; not for general compute workloads.
+
+You select a queue using the `-q` option in your PBS batch script or interactive job request, for example:
+
+.. code-block:: bash
+
+   #PBS -q normal
+
+Each queue has limits, such as:
+
+- Maximum CPUs or GPUs per job
+- Maximum walltime
+- Maximum number of running jobs per project or user
+
+Up-to-date queue characteristics and charge rates are listed at: `Queue Limits <https://opus.nci.org.au/pages/viewpage.action?pageId=236881198>`_
+
+.. note::
+   Submitting to an express or GPU queue will affect both the job's priority and cost (SU consumption).
+
+
+
 Running Batch Jobs
 ********************
 
 The overall procedure to run a job on Gadi takes a few steps:
 
-1.  Write a job script (where you specify the **queue, duration, and resource** needed).
-2.  Submit the job script to the queue 
-3.  Monitor the job status (**If the job uses more than it requested, it will be terminated immediately.**)
-4.  View the job output and error files (by default, they will be saved in the directory you submitted the job from)
-5.  Cancel the job if needed
+.. admonition:: Steps for Running a Batch Job on Gadi
+
+    1.  Write a job script (specifying the **queue, duration, and resources** needed).
+    2.  Submit the job script to the queue.
+    3.  Monitor the job status (**If the job uses more resources than requested, it will be terminated immediately**).
+    4.  View the job output and error files (by default, saved in the directory from which you submitted the job).
+    5.  Cancel the job if needed.
 
 
 
-.. note::
 
-    **Batch jobs**
 
-    A batch job is a non-interactive job submitted to the scheduler (like PBS or SLURM) to run at a later 
-    time. It executes your code or script without requiring your direct involvement during execution.
+**Batch jobs**
+
+A batch job is a non-interactive job submitted to the scheduler (like PBS or SLURM) to run at a later 
+time. It executes your code or script without requiring your direct involvement during execution.
 
 To run a batch job on Gadi, users need to create a PBS script. The script is a text file formed of two sections: **resource requests** and **job steps**. 
 Resource requests involves specifying the required number of CPUs/GPUs, expected job duration, amounts of RAM, disk space, and so on. 
@@ -241,7 +322,7 @@ to terminate the job.
 
 
 .. admonition:: Key Points
-   :class: hint
+    :class: hint
 
     #. Multiple PBS directives are available request a job.
     #. Gadi uses some custom directives.

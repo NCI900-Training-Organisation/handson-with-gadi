@@ -4,7 +4,7 @@ ARE (Australian Research Environment) gives you access to NCI’s Gadi supercomp
 
 ```{admonition} Overview
 
-**Tutorial:** 30 min
+**Tutorial:** 20 min
 
 **Objectives:**  
     - Learn how to use Jupyter notebooks in ARE.

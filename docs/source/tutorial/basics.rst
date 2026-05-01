@@ -1,4 +1,4 @@
-Basic Linux commands
+Navigating Gadi File System
 --------------------
 
 .. admonition:: Overview
@@ -12,11 +12,78 @@ Basic Linux commands
         * Learn how to manage files and directories.
         * Learn how to copy files to and from Gadi.
 
-This page introduces essential commands to get you started on Gadi. For a more detailed guide, see the `Linux Command Quick Reference <https://opus.nci.org.au/spaces/Help/pages/230490891/Linux+Command+Quick+Reference...>`_.
-If you are completely new to Linux, we recommend you to go over the `The Unix Shell <https://swcarpentry.github.io/shell-novice/index.html>`_ first.
+    This page introduces essential commands to get you started on Gadi. For a more detailed guide, see the `Linux Command Quick Reference <https://opus.nci.org.au/spaces/Help/pages/230490891/Linux+Command+Quick+Reference...>`_.
+    If you are completely new to Linux, we recommend you to go over the `The Unix Shell <https://swcarpentry.github.io/shell-novice/index.html>`_ first.
+
+
+Gadi File System
+*****************
+
+.. image:: ../figs/gadi1.png
+    :width: 70%
+    :align: center
+
+-----------
+
+.. list-table:: **Gadi File System Overview**
+   :widths: 15 20 20 45
+   :header-rows: 1
+
+   * - Location
+     - Purpose
+     - Backup / Quota
+     - Notes
+   * - **/home**
+     - Personal user space
+     - Backed up  
+       10 GiB per user
+     - Store important and hard-to-reproduce files. Meant for config and critical content only.
+   * - **/scratch**
+     - Project space, high performance
+     - Not backed up  
+       Project quota  
+       100 days expiry
+     - Fastest storage. Temporary: files deleted after 100 days of no access. Use for raw experimental output.
+   * - **/g/data**
+     - Permanent long-term project space
+     - Not backed up (unless mirrored)  
+       Project quota
+     - Store large datasets, input/output, code. Managed by institution/scheme. Persistent storage for research.
+   * - **/apps**
+     - Centrally provided software
+     - Managed by NCI  
+       Read-only
+     - Contains installed software modules and applications for all users.
+   * - **/mdss**
+     - Archival, backed-up storage
+     - Backed up  
+       Managed by scheme
+     - Uses magnetic tape. For archiving important files requiring infrequent access.
+
+.. admonition:: Knowledge Check 1: The Storage Dilemma
+    :class: attention
+
+    **Scenario:**  
+    You have a 500GB dataset that you need to analyze over the next three days. You plan to run 10 different jobs against this data.
+
+    **Question:**  
+    Which file system should you store the data in while the jobs are running, and why?
+
+    **A)** `/home`: Because it is the most secure.
+
+    **B)** `/scratch`: Because it is high-speed and designed for large-scale temporary processing.
+
+    **C)** `/g/data`: Because it is where my project is hosted.
+
+    .. dropdown:: Show answer
+
+        **Answer:**  
+        **B) /scratch.** While `/g/data` is great for long-term storage, `/scratch` is optimized for the high-speed I/O (Input/Output) required during active job execution. Just remember to move your results back to `/g/data` when done!
+
 
 Understanding your location (`pwd`)
 ***********************************
+
 
 Your *current directory* is where terminal commands run. ``pwd`` (*print working directory*) shows its full path.
 
@@ -24,8 +91,20 @@ Your *current directory* is where terminal commands run. ``pwd`` (*print working
 
     pwd
 
+.. image:: ../figs/gadi_directories.png
+    :width: 70%
+    :align: center
+
+
 Listing files (`ls`)
 ********************
+
+General syntax of a command:
+
+.. image:: ../figs/shell_command_syntax.svg
+    :width: 40%
+    :align: center
+
 
 ``ls`` lists files and folders in the current directory.
 

@@ -4,7 +4,7 @@ Virtual Desktop in ARE
 .. admonition:: Overview
     :class: Overview
 
-    **Tutorial:** 30 min
+    **Tutorial:** 10 min
 
     **Objectives:**
         * Learn how to use Virtual Desktop in ARE. 
