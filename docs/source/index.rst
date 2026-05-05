@@ -61,28 +61,28 @@ Contents
 --------
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Before the Workshop
+  :maxdepth: 1
+  :caption: Before the Workshop
 
-   access_and_setup.rst
+  access_and_setup.rst
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
-   :numbered:
+  :maxdepth: 2
+  :caption: Tutorials
+  :numbered:
 
-   tutorial/hpc.rst
-   tutorial/login.rst
-   tutorial/basics.rst
-   tutorial/modules.rst
-   tutorial/packages.rst
-   tutorial/jobs.rst
-   tutorial/use-jupyterlab.md
-   tutorial/are_desktop.rst
+  tutorial/hpc.rst
+  tutorial/login.rst
+  tutorial/basics.rst
+  tutorial/modules.rst
+  tutorial/packages.rst
+  tutorial/jobs.rst
+  tutorial/use-jupyterlab.md
+  tutorial/are_desktop.rst
    
 .. toctree::
-   :maxdepth: 1
-   :caption: References
+  :maxdepth: 1
+  :caption: References
 
-   references
+  references
 
