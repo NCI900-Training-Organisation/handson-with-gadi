@@ -150,11 +150,11 @@ Confirm the Jupyter path of your session is correct, and click on **Open Jupyter
 **Diagnosis**: You will be able to confirm this by executing the **`quota -s`** command on Gadi's <u>login node</u>. If this is the case, see the usage of Gadi's HOME using the **`du -h --max-depth=1 ~`** command.  
 **Solution:** Deleting/moving files from your Gadi's HOME directory to keep the usage below the quota.  
 ### Unable to Launch Session
-**Error: **`qsub: Error: You are not a member of project vp91. You must be a member of a project to submit a job under that project.`   
+**Error:** `qsub: Error: You are not a member of project vp91. You must be a member of a project to submit a job under that project.`   
 **Possible Cause:** You are not a member of the project used, or if you recently joined the project and system is syncing account status.   
 **Solution:** Wait for 20 minutes and try again.  
 
-**Error: **`Failed to submit session with the following error: usage: qsub [-a date_time]… If this job failed to submit because of an invalid job name please ask your administrator to configure OnDemand to set the environment variable OOD_JOB_NAME_ILLEGAL_CHARS.`  
+**Error:** `Failed to submit session with the following error: usage: qsub [-a date_time]… If this job failed to submit because of an invalid job name please ask your administrator to configure OnDemand to set the environment variable OOD_JOB_NAME_ILLEGAL_CHARS.`  
 **Possible Cause:** Special characters are submitted into the setting form.  
 **Solution:** Check the setting page values or manually type the values into the form.  
 
@@ -164,14 +164,13 @@ Confirm the Jupyter path of your session is correct, and click on **Open Jupyter
 **Solution:** Deleting/moving files from your Gadi's HOME directory to keep the usage below the quota.  
 
 **Error:** `unix listener: cannot bind to path /home/<institution_code>/<username>/.ssh/<session_ID>: No such file or directory. Your connection to the remote server has been terminated.`  
-**Possible Cause:** SSH folder is not properly setup in your account.
-**Diagnosis: **You will be able to confirm this by executing the **`ls -lah ~`** command on Gadi's <u>login node</u>. If there is no .ssh in the output or the folder permission is not correct, follow below steps to resolve the issue.
+**Possible Cause:** SSH folder is not properly setup in your account.  
+**Diagnosis:** You will be able to confirm this by executing the **`ls -lah ~`** command on Gadi's <u>login node</u>. If there is no .ssh in the output or the folder permission is not correct, follow below steps to resolve the issue.  
 **Solution:** 
 1. Login to Gadi terminal
-2. Execute the following commands:
-
-`mkdir -p ~/.ssh`  
-`chmod 700 ~/.ssh`
+2. Execute the following commands:  
+    `mkdir -p ~/.ssh`  
+    `chmod 700 ~/.ssh`
 
 ### Check Debug Log for Other Issues
 
@@ -197,12 +196,12 @@ If your issue is not solved above, please follow these instructions to check the
 
 1. Copy **Debug Log** link (if job is still running then use the **Session id** link).
 2. Send a new email to **help@nci.org.au**, include:
-    - **Subject: "ARE"** and short description of issue
+    - **Subject:"ARE"** with short description of the issue
     - **Body:** 
         - **A more detailed issue description.**
-        - **Debug Log/Session id Link: **The **link** you copied.
+        - **Debug Log/Session id Link:** The link you copied.
         - **Operating System:** e.g. Windows 11, MacOSX 13, Debian Linux etc.
-        - **Browser: **e.g. Firefox 102, Chrome 103, Edge 103
+        - **Browser:** e.g. Firefox 102, Chrome 103, Edge 103
         - **Connection:** e.g. Wired network at ANU, Wireless at Home etc.
 
 
@@ -224,12 +223,12 @@ The left sidebar contains a [file browser](https://jupyterlab.readthedocs.io/en/
 
 ### Running Notebook
 
-Double-click on a notebook (.ipynb) file to open it in the main area. Selected cell is highlighted in blue.
-**Run Selected Cell** 
+Double-click on a notebook (.ipynb) file to open it in the main area. Selected cell is highlighted in blue.  
 
-Press: **Shift + Enter** 
-or 
-Click: the **run button** on toolbar 
+**Run Selected Cell**  
+    Press: **Shift + Enter**   
+    or   
+    Click: the **run button** on toolbar  
 
 
 
@@ -238,15 +237,15 @@ Click: the **run button** on toolbar
 ### Server Connection Error
 
 
-**Error:**`"Server Connection Error. A connection to the Jupyter server could not be established. JupyterLab will continue trying to reconnect. Check your network connection or Jupyter server configuration." `
-**Possible Cause:** Reached requested job <u>Walltime</u> or exceeding requested <u>JOBFS</u> size. 
-**Diagnosis**: You will be able to confirm this by checking session log file: `$HOME/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/ncigadi/output/<session_ID>/output.log` on Gadi.
-**Solution:** Re-launching the JupyterLab session by either requesting more Walltime or JOBFS (available under the "Advanced options ..."), based on the cause of the issue.
+**Error:**`"Server Connection Error. A connection to the Jupyter server could not be established. JupyterLab will continue trying to reconnect. Check your network connection or Jupyter server configuration." `  
+**Possible Cause:** Reached requested job <u>Walltime</u> or exceeding requested <u>JOBFS</u> size.   
+**Diagnosis**: You will be able to confirm this by checking session log file: `$HOME/ondemand/data/sys/dashboard/batch_connect/sys/jupyter/ncigadi/output/<session_ID>/output.log` on Gadi.  
+**Solution:** Re-launching the JupyterLab session by either requesting more Walltime or JOBFS (available under the "Advanced options ..."), based on the cause of the issue.  
 ### Saving File Error
 
 
-**Error:**`"Unexpected error while saving file: … [Errno 13] Permission denied: '…' "`
-**Possible Cause:** This error occurs when a file with the same name already exists and might be owned by another user.
-**Diagnosis**: Check the file directory on the left panel of JupyterLab page that you are saving the file in your own folder, not other users.
+**Error:**`"Unexpected error while saving file: … [Errno 13] Permission denied: '…' "`  
+**Possible Cause:** This error occurs when a file with the same name already exists and might be owned by another user.  
+**Diagnosis**: Check the file directory on the left panel of JupyterLab page that you are saving the file in your own folder, not other users.  
 **Suggestion**: Rename the file and try saving it again.
 

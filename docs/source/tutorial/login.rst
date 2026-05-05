@@ -12,7 +12,7 @@ Logging in to Gadi
 To access Gadi, you will need to complete the crucial step of creating an NCI account and becoming affiliated with a project. Our Getting Started at NCI guide can walk you through this process if you haven't already begun. 
 
 By Australian Research Environment (ARE)
-*************************************
+******************************************
 
 .. image:: ../figs/12.png
 
@@ -32,7 +32,7 @@ Now you should have access to a terminal on Gadi.
 
 
 Practice: Login to ARE and open a terminal
-*****************************************
+*******************************************
 
 .. admonition:: Exercise
     :class: attention
@@ -64,7 +64,9 @@ The first step is to assess what operating system you are using, as that will ch
 
    .. tab-item:: Windows
 
-      Windows users need to download and install **MobaXterm** from https://mobaxterm.mobatek.net/. This application will serve as your SSH client to access Gadi.
+      Windows users can use PowerShell to perform an SSH login.
+      **OR** 
+      Download and install **MobaXterm** from https://mobaxterm.mobatek.net/. This application will serve as your SSH client to access Gadi.
 
       A quick guide to using MobaXterm is available to help you get started. Please follow the guide before continuing with this walkthrough.
 
@@ -83,4 +85,14 @@ Replacing <username> with your MyNCI user name. e.g. aaa777, then enter your pas
    
    This is normal behavior for Linux-based systems. Simply type your password and press Enter.
 
+**Using Graphical Tools**
 
+#. Run an X server on your local system, such as **XQuartz** on Mac, **startx** on Linux, or **MobaXterm** on windows  
+
+#. Login to Gadi using ``ssh -Y <username>@gadi.nci.org.au``. 
+
+   The ``-Y`` enables forwarding of trusted X protocol messages between your X-Server and Gadi's X programs, allowing you to use graphical applications on Gadi.
+
+#. Test the connection by running ``xclock`` or ``xeyes``. These are simple X programs that display a clock or eyes, respectively.
+
+For more information on using graphical tools to access Gadi, please refer to the `NCI Documentation <https://opus.nci.org.au/spaces/Help/pages/230491359/Connecting+to+Gadi...#ConnectingtoGadi...-GraphicalTools>`_.

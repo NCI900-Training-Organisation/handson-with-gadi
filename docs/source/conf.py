@@ -1,14 +1,13 @@
 # Configuration file for the Sphinx documentation builder.
 
-# TODO: UPDATE THIS FILE TO CUSTOMISE THE DOCUMENTATION.
 # -- Project information
 # Title can be changed in the index.rst file
-# project = 'Handson with Gadi'
+project = 'Handson with Gadi'
 copyright = '2026, National Computational Infrastructure'
 author = 'NCI Training'
 
-release = '0.1'
-version = '0.1.0'
+release = '0.2'
+version = '0.2.0'
 
 # -- General configuration
 
@@ -48,8 +47,7 @@ html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_theme_options = {
     "path_to_docs": "docs/source",
-    # TODO: UPDATE THIS TO THE WORKSHOP REPOSITORY URL OF THE DOCUMENTATION.
-    "repository_url": "https://github.com/zora-wuw/test_template",
+    "repository_url": "https://github.com/NCI900-Training-Organisation/handson-with-gadi",
     "use_repository_button": True,
     "home_page_in_toc": True,
     "back_to_top_button": True,

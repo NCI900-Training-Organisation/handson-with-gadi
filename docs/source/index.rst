@@ -1,6 +1,9 @@
 Handson with Gadi
 ===========================================
 
+Overview
+--------
+
 This workshop provides an  introduction to basic command-line operations and guidelines for working 
 efficiently on Gadi, the high-performance computing (HPC) machine at the National Computational 
 Infrastructure (NCI).
@@ -25,10 +28,10 @@ Infrastructure (NCI).
 .. admonition:: Prerequisites
    :class: attention
 
-   1. Access to a shell that supports SSH.
-   2. NCI account and access to project `vp91`.
+   1. Know how to use a computer. 
+   2. Familiar with Linux command line interface is recommended, but we will cover the basics in the workshop.
 
-.. list-table::
+.. list-table:: Suggested Workshop Agenda
   :widths: 58 42
   :header-rows: 1
 
@@ -51,7 +54,7 @@ Infrastructure (NCI).
   * - Virtual Desktop in ARE
     - 10 minutes
   * - **Total**
-    - 140 minutes
+    - **140 minutes**
 
 
 Contents
@@ -59,14 +62,13 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Setup and Prerequisites
+   :caption: Before the Workshop
 
-   prerequisite
-   outcomes
+   access_and_setup.rst
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorial
+   :caption: Tutorials
    :numbered:
 
    tutorial/hpc.rst
@@ -77,8 +79,10 @@ Contents
    tutorial/jobs.rst
    tutorial/use-jupyterlab.md
    tutorial/are_desktop.rst
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: References
+
    references
-
-
-
 
