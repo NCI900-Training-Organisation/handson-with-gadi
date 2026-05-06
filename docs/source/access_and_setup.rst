@@ -1,20 +1,25 @@
-Prerequisite
-============
+Access and Setup
+================
+
+Before you can access Gadi, you need to have your account in order.
 
 .. note::
-    #. Access to a shell that supports SSH.
-    #. NCI account and access to project `vp91`.
+    #. **Active NCI Account**: Must have a valid NCI username (e.g., abc1234) and a working password.
+    #. **Project Membership**: Students must be a member of project ``vp91`` to access compute resources and storage.
 
-.. important::
-    For a smooth setup on the supercomputer system, please register for an NCI account if you don't have one:
-    
+Check that you can log in to the `MyNCI portal <http://my.nci.org.au/>`_ to confirm your account is active.
+
+Setup Project Membership
+-------------------------
+
+ If you don't have an NCI account   
     #. Go to https://my.nci.org.au/mancini
     #. Click on the "Sign up" button to start your registration form.
     #. Complete all steps in the registration form. (Note: you must provide a current email address from your institution or place of work, not a personal email.)
     #. Select the option to join project vp91 at Step 3 of the form.
     #. Click "Finish" on the final page of the form to complete your registration request.
 
- or 
+or 
 
  If you already have an account
     #. Login to your NCI account https://my.nci.org.au/mancini

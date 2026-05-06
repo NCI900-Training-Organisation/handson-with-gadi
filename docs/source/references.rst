@@ -7,4 +7,7 @@ Contributors
 ************
 
 1.  `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
+
 2.  Abdullah Shaikh, Skills Development Manager, NCI
+
+3.  Zhuochen Wu, Training Coordinator, NCI
