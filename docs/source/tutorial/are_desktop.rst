@@ -66,7 +66,7 @@ Requesting GPUs
 
 .. image:: ../figs/10.png
 
-Use the queue `qpuvolta` for GPUs.
+Use the queue ``gpuvolta`` for GPUs.
 
 .. image:: ../figs/11.png
 

@@ -1,4 +1,4 @@
-Requesting Resources
+Gadi Compute Job Basics
 --------------------
 
 .. admonition:: Overview
@@ -44,6 +44,25 @@ However, this is not always possible, especially for new users or running a new 
 
     Searching for this sweet spot can take time and experimentation, some code will need several iterations before that efficiency is found.     
 
+
+Accounting Commands
+^^^^^^^^^^^^^^^^^^^
+
+.. list-table:: **Common Accounting Commands**
+   :widths: 25 75
+   :header-rows: 1
+
+   * - Command
+     - Description
+   * - ``nci_account``
+     - Display compute grant and usage
+   * - ``quota -s``
+     - Display storage grant and usage on ``/home``
+   * - ``lquota``
+     - Display storage grant and usage on ``/scratch`` and ``/g/data`` by project
+   * - ``nci-files-report -f <fs> -g <grp>``
+     - Report data usage on filesystem ``<fs>`` owned by the project ``<grp>`` by (project folder, user)
+
 Compute Resources
 ^^^^^^^^^^^^^^^^^
 Compute resources are allocated to **projects**, not individual users, through various allocation schemes.
@@ -52,7 +71,6 @@ Compute resources are allocated to **projects**, not individual users, through v
 - Projects must have a compute allocation to run jobs.
 - Compute allocations are assigned quarterly.
 - Allocations can be transferred, adjusted, or reallocated by the project's Chief Investigator (CI) or scheme manager.
-- Unused allocations can roll over to the next quarter if requested within the first two weeks of the current quarter.
 
 Service Units (SUs) are charged based on the resources reserved for a job and the walltime. The resources reserved are determined by the greater of 
 the requested CPUs or the proportion of memory.
@@ -77,29 +95,28 @@ The situation can become more complex:
 
 - Some jobs may require fewer CPUs but need more memory.
 - Others may require GPUs.
-- Some jobs might need to use the express queue.
 
 Queue Structure
 ^^^^^^^^^^^^^^^^^
 
-Jobs on Gadi are submitted to different **queues**, which determine resource availability, limits, and cost (service unit charge rates). Each queue is optimized for different workloads:
+Jobs on Gadi are submitted to different **queues**, which determine resource availability, limits, and cost (service unit charge rates). As a new user, focus on the ``normal`` queue first—most standard CPU work runs there. Other queues are available when you need faster turnaround, data transfer, or GPUs.
 
-.. list-table:: Gadi Queue Types
+.. list-table:: Common Gadi Queues
    :widths: 20 80
    :header-rows: 1
 
    * - Queue Name
      - Description
    * - **normal**
-     - For standard jobs, with moderate walltime and resource limits. Most projects use this queue by default.
+     - Default queue for standard CPU jobs. Start here for most workloads.
    * - **express**
      - For short, urgent work with higher queue priority but increased SU charges. Limited walltime.
-   * - **gpuvolta/gpua100**
-     - Specifically for jobs requiring access to NVIDIA Volta or A100 GPUs, respectively.
-   * - **hugemem**
-     - For jobs requiring nodes with large memory (up to several terabytes per node).
    * - **copyq**
-     - For high-speed data transfer jobs; not for general compute workloads.
+     - For data transfer and massdata (MDSS) operations; not for general compute workloads.
+   * - **gpuvolta**
+     - For jobs requiring NVIDIA Volta GPUs. The most widely available GPU queue on Gadi.
+
+Gadi also has specialised queues (for example ``hugemem``, ``normalsr``, and ``dgxa100``) for very large memory, newer CPU hardware, or specialised GPU nodes. See the `Queue Structure <https://opus.nci.org.au/display/Help/Queue+Structure>`_ page when you need those.
 
 You select a queue using the `-q` option in your PBS batch script or interactive job request, for example:
 
@@ -176,6 +193,7 @@ Here is an example of a PBS script:
 #. **-l ncpus** - Total number of cores requested
 #. **-l ngpus** - Total number of GPUs requested
 #. **-l mem** - Total memory requested
+#. **-l jobfs** - Local scratch space on the compute node (access via ``$PBS_JOBFS``; removed when the job ends)
 #. **-l storage** - Storage in ``g/data`` and ``/scratch`` to come from project ``vp91``
 #. **-l walltime** - Total wall time for which the resources are provisioned (in hours:minutes:seconds)
 #. **-N** - Name of the job 
@@ -203,13 +221,16 @@ Practice: Write a PBS job script
     .. code-block:: bash
        :linenos:
 
-       #!/bin/bashs
+       #!/bin/bash
 
        #PBS -P <Project code>
        #PBS -q normal
        #PBS -l ncpus=4
-       #PBS -l mem=16gb
+       #PBS -l mem=8gb
+       #PBS -l jobfs=1GB
        #PBS -l walltime=00:10:00
+       #PBS -l storage=gdata/vp91+scratch/vp91
+       #PBS -l wd
 
        module load openmpi/4.1.5
        mpirun hello_mpi

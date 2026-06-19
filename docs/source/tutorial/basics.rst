@@ -1,4 +1,4 @@
-Navigating Gadi File System
+Navigating Gadi File Systems
 --------------------
 
 .. admonition:: Overview
@@ -16,7 +16,7 @@ Navigating Gadi File System
     If you are completely new to Linux, we recommend you to go over the `The Unix Shell <https://swcarpentry.github.io/shell-novice/index.html>`_ first.
 
 
-Gadi File System
+Gadi File Systems
 *****************
 
 .. image:: ../figs/gadi1.png
@@ -25,7 +25,7 @@ Gadi File System
 
 -----------
 
-.. list-table:: **Gadi File System Overview**
+.. list-table:: **Gadi File Systems Overview**
    :widths: 15 20 20 45
    :header-rows: 1
 
@@ -34,31 +34,49 @@ Gadi File System
      - Backup / Quota
      - Notes
    * - **/home**
-     - Personal user space
+     - Personal user storage
      - Backed up  
        10 GiB per user
      - Store important and hard-to-reproduce files. Meant for config and critical content only.
    * - **/scratch**
-     - Project space, high performance
+     - Temporary project storage, high performance
      - Not backed up  
        Project quota  
        100 days expiry
      - Fastest storage. Temporary: files deleted after 100 days of no access. Use for raw experimental output.
    * - **/g/data**
-     - Permanent long-term project space
-     - Not backed up (unless mirrored)  
+     - Persistent project storage
+     - Not backed up  
        Project quota
-     - Store large datasets, input/output, code. Managed by institution/scheme. Persistent storage for research.
+     - Long-term storage for datasets, code, and results. Allocations are set per project through stakeholder entitlements. RAID redundancy protects data integrity on disk, but no storage is guaranteed forever—projects must manage their data over the life of their allocation.
+   * - **JOBFS** (``$PBS_JOBFS``)
+     - Fast, local scratch during a job
+     - Not backed up  
+       Per-job limit
+     - Local disk on the compute node, available only while the job runs. Request with ``#PBS -l jobfs=<size>`` and access paths via the ``$PBS_JOBFS`` environment variable. Contents are removed when the job ends.
    * - **/apps**
-     - Centrally provided software
+     - NCI Third-party software catalogue
      - Managed by NCI  
        Read-only
      - Contains installed software modules and applications for all users.
-   * - **/mdss**
-     - Archival, backed-up storage
-     - Backed up  
-       Managed by scheme
-     - Uses magnetic tape. For archiving important files requiring infrequent access.
+
+
+
+.. list-table:: **Massdata Storage System**
+   :widths: 15 20 20 45
+   :header-rows: 1
+
+   * - Location
+     - Purpose
+     - Backup / Quota
+     - Notes
+   * - **massdata** (MDSS)
+     - Archival storage
+     - Backed up 
+       Project quota
+     - Massdata is an integrated system of front-end servers, disk cache, and tape archive. There is no ``/mdss`` mount path on Gadi. Use the ``mdss`` command to store and retrieve data. Best for large archives, not many small files.
+ 
+Most workflows use a combination of these systems rather than relying on one alone. For example, you might stage inputs from ``/g/data`` into ``/scratch`` or JOBFS for a job, write outputs back to ``/g/data``, and archive finished datasets to massdata. Effective job scripting is about orchestrating these resources, not picking a single filesystem and stopping there.
 
 .. admonition:: Knowledge Check 1: The Storage Dilemma
     :class: attention
@@ -71,14 +89,15 @@ Gadi File System
 
     **A)** `/home`: Because it is the most secure.
 
-    **B)** `/scratch`: Because it is high-speed and designed for large-scale temporary processing.
+    **B)** `/scratch`: Because it is high-speed and designed for large-scale temporary usage.
 
     **C)** `/g/data`: Because it is where my project is hosted.
 
     .. dropdown:: Show answer
 
         **Answer:**  
-        **B) /scratch.** While `/g/data` is great for long-term storage, `/scratch` is optimized for the high-speed I/O (Input/Output) required during active job execution. Just remember to move your results back to `/g/data` when done!
+        **B) /scratch.** While `/g/data` is great for persistent project storage, `/scratch` is optimized for the high-speed I/O (Input/Output) required during active job execution. For very I/O-intensive work within a single job, you might also use JOBFS via ``$PBS_JOBFS``. When you are done, move results you want to keep back to `/g/data`.
+
 
 
 Understanding your location (`pwd`)

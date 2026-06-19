@@ -12,7 +12,12 @@ Modules
 Modules are how we manage software in most HPC machines. It provides a way to modify the user's environment to access required software packages. 
 
 Gadi has a large array of software applications installed on its system. 
-These are stored in ``/apps`` directory and can be accessed by loading the corresponding module. 
+These are stored in ``/apps`` directory and can be accessed by loading the corresponding module.  
+
+.. admonition:: Info
+    :class: info
+
+    You can check this page for Licence Live Status: `my.nci.org.au/licence-status <https://my.nci.org.au/licence-status>`_
 
 
 Module Commands

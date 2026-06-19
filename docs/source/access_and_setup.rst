@@ -1,13 +1,16 @@
 Access and Setup
 ================
 
-Before you can access Gadi, you need to have your account in order.
+.. admonition:: Attention
+   :class: attention
 
-.. note::
-    #. **Active NCI Account**: Must have a valid NCI username (e.g., abc1234) and a working password.
-    #. **Project Membership**: Students must be a member of project ``vp91`` to access compute resources and storage.
+   For guided workshop sessions, the organisers will create trainee accounts for you. There is no need to create your own account.
+   You can skip the following steps and go to the next section.
 
-Check that you can log in to the `MyNCI portal <http://my.nci.org.au/>`_ to confirm your account is active.
+
+If required by organisers, follow the steps below to setup/create your own account.
+
+
 
 Setup Project Membership
 -------------------------
@@ -28,4 +31,4 @@ or
 
 
 .. warning::
-    Project vp91 is temporary for training purposes only. Data in vp91 will be cleaned in one week time after the training.
+    Project vp91 is temporary for training purposes only. Data in vp91 will be cleaned immediately after the training.

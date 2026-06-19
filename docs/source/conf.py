@@ -2,7 +2,7 @@
 
 # -- Project information
 # Title can be changed in the index.rst file
-project = 'Handson with Gadi'
+project = 'Hands-On with Gadi'
 copyright = '2026, National Computational Infrastructure'
 author = 'NCI Training'
 

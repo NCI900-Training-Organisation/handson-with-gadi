@@ -100,7 +100,7 @@ Differences from Desktop Computing
 - Compute nodes:
     - Are not connected to the internet.
     - Cannot download data/packages on the fly.
-    - Job output is saved to the file system.
+    - Job output may be saved to the file system.
     - Users return later to check results.
 - Shared system with many users:
     - Need to be careful with resource usage and avoid overloading the system.
@@ -116,7 +116,7 @@ Differences from Desktop Computing
 Gadi
 ^^^^
 
-**Meet Gadi: Australia's Premier HPC Facility**
+**Meet Gadi: One of Australia's Premier HPC Facilities**
 
 .. image:: ../figs/arch3.png
     :width: 100%
