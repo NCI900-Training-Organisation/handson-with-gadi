@@ -15,21 +15,25 @@ Infrastructure (NCI).
 
    1. **Understand Gadi’s Architecture:** Identify the key components of the Gadi supercomputer and combine the appropriate file systems (home, scratch, ``/g/data``, JOBFS) for different stages of their project.
 
-   2. **Operate in a Remote HPC Environment:** Confidently use the Australian Research Environment (ARE) to access Gadi via web-based interfaces, including Jupyter Notebooks and Virtual Desktops.
+   2. **Operate in an HPC Environment:** Confidently use the Australian Research Environment (ARE) to access Gadi via web-based interfaces, including Jupyter Notebooks and Virtual Desktops.
 
    3. **Use the Command Line Interface:** Perform essential remote file management and text editing using Linux commands tailored for a high-performance computing context.
 
    4. **Manage Computational Jobs:** Write and submit batch scripts to the job scheduler, and differentiate between interactive and batch modes to optimize resource usage.
 
-   5. **Utilise Specialised Hardware:** Configure ARE sessions to request and utilise GPU resources for accelerated computing tasks in Jupyter and desktop environments.
+   5. **Utilise Specialised Services:** Gain familiarity with the range of services available on Gadi, including CPU and GPU systems, interactive ARE sessions, and Jupyter Notebook environments for scientific computing and data analysis.
 
-   6. **Apply HPC Best Practices:** Navigate NCI’s specific queues and resource limits to ensure efficient job execution within the Gadi system.
+   6. **Apply HPC Best Practices:** Understand how job queues, scheduling policies, and resource limits influence workload execution and resource utilisation in an HPC environment.
 
 .. admonition:: Prerequisites
    :class: attention
 
-   1. Know how to use a computer. 
-   2. Familiar with Linux command line interface is recommended, but we will cover the basics in the workshop.
+
+    1. Access to a terminal environment.
+
+    2. Access to a web browser.
+    
+    3. Familiarity with the Linux command-line interface is recommended; however, basic concepts will be covered during the workshop.
 
 .. list-table:: Suggested Workshop Agenda
   :widths: 58 42

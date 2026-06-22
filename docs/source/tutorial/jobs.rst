@@ -199,6 +199,13 @@ Here is an example of a PBS script:
 #. **-N** - Name of the job 
 #. **-l wd** - Enter the working directory once the job has started.
 
+
+.. note::
+
+ `#PBS` is a PBS scheduler directive used to pass job configuration options to the batch system, 
+ while `#!/bin/bash` is a shebang that specifies the script should be executed using the Bash shell.
+
+
 .. note::
 
    For more PBS directives, see the `PBS directive list <https://opus.nci.org.au/display/Help/PBS+Directives+Explained>`_. 

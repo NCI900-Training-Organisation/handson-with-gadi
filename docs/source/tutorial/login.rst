@@ -9,7 +9,9 @@ Logging in to Gadi
     **Objectives:**
         * Learn how to use Gadi terminal in ARE. 
 
-To access Gadi, you will need to complete the crucial step of creating an NCI account and becoming affiliated with a project. Our Getting Started at NCI guide can walk you through this process if you haven't already begun. 
+To access Gadi, you must first create an NCI account and be affiliated with a project. Projects are 
+typically allocated through either the National Computational Merit Allocation Scheme or 
+stakeholder allocations. If you have not yet completed this process, our *Getting Started at NCI* guide provides step-by-step instructions to help you get started.
 
 By Australian Research Environment (ARE)
 ******************************************

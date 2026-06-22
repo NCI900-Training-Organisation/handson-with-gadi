@@ -306,6 +306,14 @@ Viewing and editing text
 
     vim file.txt
 
+
+.. note::
+
+  These are some of the options available for managing and editing files on Gadi. You can also use 
+  other tools such as Emacs or IDEs like VS Code.
+
+
+
 Practice: Create, inspect, tidy up
 ********************************
 
@@ -347,6 +355,13 @@ Copy **from** Gadi **to** your current local folder:
 .. code-block:: bash
 
     scp YOUR_USERNAME@gadi.nci.org.au:/remote/path/file .
+
+.. note::
+
+    Another option is to use `rsync`. Unlike `scp`, which copies files in full each time, `rsync` 
+    transfers only the changed portions of files, making it more efficient for large or frequently 
+    updated datasets.
+
 
 Practice: Prepare the code for your first job on Gadi
 **************************************************

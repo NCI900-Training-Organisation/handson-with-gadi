@@ -9,10 +9,15 @@ Modules
     **Objectives:**
     Learn how to find and load modules on Gadi.
 
-Modules are how we manage software in most HPC machines. It provides a way to modify the user's environment to access required software packages. 
+Modules are the standard way software is managed on most HPC systems. They allow users to dynamically 
+configure their environment so that required applications, libraries, and dependencies can be 
+accessed without user installation or environment setup.
 
-Gadi has a large array of software applications installed on its system. 
-These are stored in ``/apps`` directory and can be accessed by loading the corresponding module.  
+On Gadi, a wide range of software applications is centrally installed and maintained. These are stored 
+in the `/apps` directory to provide a shared, consistent, and optimised software environment for 
+all users. Keeping software in a central location avoids duplication, ensures consistent versions 
+across users, simplifies maintenance and updates, and supports performance tuning for the HPC 
+architecture. 
 
 .. admonition:: Info
     :class: info

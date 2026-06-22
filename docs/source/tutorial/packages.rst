@@ -12,6 +12,14 @@ Using Python on Gadi
 
 To run Python programs on Gadi, we recommend using the **Python module** and **virtual environments** to manage dependencies. 
 
+.. note::
+
+   Python packages are not typically centrally managed on HPC systems in the same way as software 
+   installed in `/apps`, because the Python ecosystem evolves quickly and often requires different, 
+   and sometimes conflicting, package versions across users and projects. While `/apps` is well suited 
+   to stable, shared applications, Python workflows are highly flexible and user-specific, making a 
+   single system-wide installation impractical.
+
 A Python virtual environment is an isolated workspace that allows you to manage project-specific dependencies without affecting the global Python installation or other projects. By creating a 
 virtual environment, you can install and manage libraries and packages independently, ensuring that each project has its own set of dependencies and 
 avoiding version conflicts. This isolation helps maintain consistent and reproducible development environments.
