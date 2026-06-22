@@ -7,7 +7,7 @@ copyright = '2026, National Computational Infrastructure'
 author = 'NCI Training'
 
 release = '2026.6'
-version = '2026.6.0'
+version = '2026.6.2'
 
 # -- General configuration
 
