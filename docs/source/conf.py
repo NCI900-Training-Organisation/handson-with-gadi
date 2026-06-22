@@ -6,8 +6,8 @@ project = 'Hands-On with Gadi'
 copyright = '2026, National Computational Infrastructure'
 author = 'NCI Training'
 
-release = '0.2'
-version = '0.2.0'
+release = '2026.6'
+version = '2026.6.0'
 
 # -- General configuration
 
