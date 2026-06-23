@@ -132,4 +132,4 @@ Key specifications:
 - 930 terabytes of memory
 - 200 Gb/s InfiniBand HDR network
 
-Gadi debuted as the 24th fastest supercomputer in the world and is currently ranked 62nd.
+Gadi debuted as the 24th fastest supercomputer in the world and is currently ranked 201.
