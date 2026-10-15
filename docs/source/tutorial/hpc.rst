@@ -42,7 +42,7 @@ We can think of it as multiple laptops connected together by high-speed network 
           :width: 50%
 
 Each laptop stands for a compute node, so here we have 5 compute nodes.
-If each laptop has 2 processors, each processor has 4 cores, then this cluster has 40 cores. Gadi contains more than 260,000 CPU cores, 1.25 petabytes of memory and 776 GPUs.
+If each laptop has 2 processors, each processor has 4 cores, then this cluster has 40 cores. Gadi contains more than 260,000 CPU cores, 1.25 petabytes of memory and 776 GPU cores.
 
 An HPC cluster is made up of hundreds or thousands of compute nodes, that are networked together to work in parallel, significantly 
 increasing processing speed. (Only when the program is coded to do parallel computing! The HPC **will not** automatically run all code in parallel.)
