@@ -29,7 +29,7 @@ HPC performance is measured in terms of **floating point operations per second**
 
 Modern supercomputers are measured in petaflops. A petaflops is 10^15 FLOPS, meaning it can perform 10^15 floating point operations per second.
 
-Gadi is Australia's fastest CPU-based research supercomputer, delivering more than 10 petaflops of peak performance, which equates to over ten quadrillion (10¹⁵) floating point operations per second.
+Gadi is a powerful CPU-based research supercomputer, delivering more than 10 petaflops of peak performance, which equates to over ten quadrillion (10¹⁵) floating point operations per second.
 
 How is it achieved?
 
