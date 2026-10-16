@@ -6,8 +6,8 @@ Reference
 Contributors
 ************
 
-1.  `Joseph John, Staff Scientist, NCI <https://www.josephjohn.org>`_
+1.  Dr Joseph John, Staff Scientist, NCI
 
-2.  Abdullah Shaikh, Skills Development Manager, NCI
+2.  Dr Abdullah Shaikh, Training Manager, NCI
 
 3.  Zhuochen Wu, Training Coordinator, NCI
