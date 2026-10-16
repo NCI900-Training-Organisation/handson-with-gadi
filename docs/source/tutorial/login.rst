@@ -10,7 +10,7 @@ Logging in to Gadi
         * Learn how to use Gadi terminal in ARE. 
 
 To access Gadi, you must first create an NCI account and be affiliated with a project. Projects are 
-typically allocated through either the National Computational Merit Allocation Scheme or 
+typically allocated through either the National Computational Merit Allocation Scheme (NCMAS) or 
 stakeholder allocations. If you have not yet completed this process, our *Getting Started at NCI* guide provides step-by-step instructions to help you get started.
 
 By Australian Research Environment (ARE)
