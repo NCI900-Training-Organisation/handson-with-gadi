@@ -18,7 +18,7 @@ By Australian Research Environment (ARE)
 
 .. image:: ../figs/12.png
 
-Us the link - http://are.nci.org.au to login to Australian Research Environment (ARE). 
+Use the link - http://are.nci.org.au to login to Australian Research Environment (ARE). 
 
 .. image:: ../figs/13.png
 
@@ -33,8 +33,7 @@ From the landing page select **Gadi Terminal**.
 Now you should have access to a terminal on Gadi. 
 
 
-Practice: Login to ARE and open a terminal
-*******************************************
+**Practice: Login to ARE and open a terminal**
 
 .. admonition:: Exercise
     :class: attention
