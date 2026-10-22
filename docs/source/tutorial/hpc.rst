@@ -123,7 +123,7 @@ Gadi
 
 *Photo: Gadi servers at NCI*
 
-Gadi is Australia's fastest CPU-based research supercomputer, delivering more than 10 petaflops of peak performance, which equates to over ten quadrillion (10¹⁵) floating point operations per second. 
+Gadi is a powerful CPU-based research supercomputer, delivering more than 10 petaflops of peak performance, which equates to over ten quadrillion (10¹⁵) floating point operations per second. 
 
 Key specifications:
 
